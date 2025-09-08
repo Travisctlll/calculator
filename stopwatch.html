@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stopwatch</title>
+    <link rel="stylesheet" href="stopwatch.css" />
+  </head>
+  <body
+    style="
+      height: 1000px;
+      display: flex;
+      justify-content: center;
+      background-color: pink;
+      align-items: center;
+      flex-direction: column;
+    "
+  >
+    <script>
+      const container = document.createElement("div");
+      container.classList.add("container");
+      const header = document.createElement("h1");
+      header.innerText = "stopwatch";
+
+      const allbutton = document.createElement("div");
+      const button = document.createElement("button");
+      button.classList.add("button");
+      button.innerHTML = "start";
+      const button2 = document.createElement("button");
+      button2.classList.add("button");
+      button2.innerHTML = "pause";
+      const button3 = document.createElement("button");
+      button3.classList.add("button");
+      button3.innerHTML = "reset";
+      document.body.appendChild(header);
+      container.appendChild(button);
+      container.appendChild(button2);
+      container.appendChild(button3);
+
+      container.appendChild(allbutton);
+
+      document.body.appendChild(container);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body
+    style="
+      background-color: pink;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1000px;
+      background-image: url('kitty.jpg');
+    "
+  >
+    <script>
+      const container = document.createElement("div");
+      const header = document.createElement("h1");
+
+      container.classList.add("container");
+      const conclusion = document.createElement("div");
+      conclusion.classList.add("conclusion");
+      container.appendChild(conclusion);
+      const img = document.createElement("img");
+      img.src = "stick.jpg";
+      const allbutton = document.createElement("div");
+      allbutton.classList.add("allbutton");
+      const button = document.createElement("button");
+      button.classList.add("button");
+      button.innerText = "AC";
+      button.onclick = () => action_ac();
+      const button1 = document.createElement("button");
+      button1.innerText = "+/-";
+
+      button1.classList.add("button");
+      const button2 = document.createElement("button");
+      button2.classList.add("button");
+      button2.innerText = "%";
+      const button3 = document.createElement("button");
+      button3.classList.add("button");
+      button3.innerText = "/";
+      button3.onclick = () => action("/");
+
+      const button5 = document.createElement("button");
+      button5.classList.add("button");
+      button5.innerText = "7";
+      button5.onclick = () => action("7");
+      const button6 = document.createElement("button");
+      button6.classList.add("button");
+      button6.innerText = "8";
+      function action(value) {
+        conclusion.innerText += value;
+      }
+      function action_equal() {
+        try {
+          conclusion.innerText = eval(conclusion.innerText);
+        } catch {
+          conclusion.innerText = "buruu bnshd";
+        }
+      }
+      function action_ac() {
+        conclusion.innerText = "";
+      }
+
+      button6.onclick = () => action("8");
+      const button7 = document.createElement("button");
+      button7.classList.add("button");
+      button7.innerText = "9";
+      button7.onclick = () => action("9");
+      const button8 = document.createElement("button");
+      button8.classList.add("button");
+      button8.innerText = "*";
+
+      const button9 = document.createElement("button");
+
+      button9.classList.add("button");
+      button9.innerText = "*";
+      button9.onclick = () => action("*");
+      const button10 = document.createElement("button");
+      button10.classList.add("button");
+      button10.innerText = "4";
+      button10.onclick = () => action("4");
+      const button11 = document.createElement("button");
+      button11.classList.add("button");
+      button11.innerText = "5";
+      button11.onclick = () => action("5");
+      const button12 = document.createElement("button");
+      button12.classList.add("button");
+      button12.innerText = "6";
+      button12.onclick = () => action("6");
+      const button13 = document.createElement("button");
+      button13.classList.add("button");
+      button13.innerText = "-";
+      button13.onclick = () => action("-");
+      const button14 = document.createElement("button");
+      button14.innerText = "1";
+      button14.onclick = () => action("1");
+      button14.classList.add("button");
+      const button15 = document.createElement("button");
+      button15.classList.add("button");
+      button15.innerText = "2";
+      button15.onclick = () => action("2");
+      const button16 = document.createElement("button");
+      button16.classList.add("button");
+      button16.innerText = "3";
+      button16.onclick = () => action("3");
+      const button17 = document.createElement("button");
+      button17.classList.add("button");
+      button17.innerText = "+";
+      button17.onclick = () => action("+");
+      const button19 = document.createElement("button");
+      button19.classList.add("button");
+      button19.innerText = "0";
+      button19.onclick = () => action("0");
+      const button20 = document.createElement("button");
+      button20.classList.add("button");
+      button20.innerText = ".";
+      button20.onclick = () => action(".");
+      const button21 = document.createElement("button");
+      button21.classList.add("button");
+      button21.innerText = "=";
+      button21.onclick = () => action_equal("");
+
+      allbutton.appendChild(button);
+      allbutton.appendChild(button1);
+      allbutton.appendChild(button2);
+      allbutton.appendChild(button3);
+      allbutton.appendChild(button5);
+      allbutton.appendChild(button6);
+      allbutton.appendChild(button7);
+      allbutton.appendChild(button9);
+      allbutton.appendChild(button10);
+      allbutton.appendChild(button11);
+      allbutton.appendChild(button12);
+      allbutton.appendChild(button13);
+      allbutton.appendChild(button14);
+      allbutton.appendChild(button15);
+      allbutton.appendChild(button16);
+      allbutton.appendChild(button17);
+      allbutton.appendChild(button19);
+      allbutton.appendChild(button20);
+      allbutton.appendChild(button21);
+      container.appendChild(allbutton);
+      container.appendChild(header);
+
+      document.body.appendChild(container);
+    </script>
+  </body>
+</html>

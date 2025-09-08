@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dom.css" />
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      background-color: rgb(220, 220, 220);
+    "
+  >
+    <script>
+      const container = document.createElement("div");
+      container.classList.add("container");
+
+      const header = document.createElement("h1");
+      header.innerText = "this is a header";
+      header.classList.add("header");
+      const Email = document.createElement("input");
+      Email.classList.add("input1");
+      Email.placeholder = "Enter your email";
+      const Password = document.createElement("input");
+      Password.classList.add("input1");
+      Password.placeholder = "Enter your password";
+
+      container.appendChild(header);
+      container.appendChild(Email);
+      container.appendChild(Password);
+      function handleSubmit() {
+        alert(`Email: ${Email.value}\nPassword: ${Password.value}`);
+      }
+      const button = document.createElement("button");
+      button.classList.add("button");
+      button.innerText = "Submit";
+      button.onclick = handleSubmit;
+      container.appendChild(button);
+
+      document.body.appendChild(container);
+    </script>
+  </body>
+</html>

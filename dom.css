@@ -1,0 +1,22 @@
+.header {
+  color: rgb(55, 117, 231);
+}
+.container {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 5px;
+}
+.input1 {
+  background-color: rgb(212, 211, 211);
+}
+.button {
+  background-color: rgb(54, 54, 224);
+  width: 150px;
+  height: 20px;
+  cursor: pointer;
+}
